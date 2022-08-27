@@ -63,17 +63,14 @@ int main(void)
     //Grade = (Coleman-Liau formula round to nearest int)
     int grade = round(index);
 
-    printf("Grade %i\n", grade);
-
     //If index number is less than 1, display "Before Grade 1"
     if (grade < 1)
     {
         printf("Before Grade 1\n");
-    }
-
-    //If index number is 16 or higher, display "Grade 16+"
-    if (grade > 16)
-    {
+    } else if (grade > 16) {
+        //If index number is 16 or higher, display "Grade 16+"
         printf("Grade 16+\n");
+    } else {
+        printf("Grade %i\n", grade);
     }
 }
